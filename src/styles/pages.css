@@ -1,0 +1,389 @@
+/* ============================================
+   ACTIQUER LMS — Page-Specific Styles
+   ============================================ */
+
+/* ---- Dashboard Stat Cards ---- */
+.stat-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .stat-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.stat-card .stat-number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card .stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* ---- Data Tables ---- */
+.lms-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lms-table thead {
+  background: #000;
+  color: #fff;
+}
+
+.lms-table thead th {
+  padding: 0.875rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border: none;
+}
+
+.lms-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.lms-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.lms-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---- Status Badges ---- */
+.badge-status {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+}
+
+.badge-active {
+  background: #000;
+  color: #fff;
+}
+
+.badge-returned {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.badge-overdue {
+  background: #dc2626;
+  color: #fff;
+}
+
+.badge-available {
+  background: #059669;
+  color: #fff;
+}
+
+.badge-reserved {
+  background: #d97706;
+  color: #fff;
+}
+
+/* ---- Page Headers ---- */
+.page-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.page-header p {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* ---- Admin Panel Wrapper ---- */
+.admin-panel {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 0;
+  overflow: hidden;
+}
+
+.admin-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-panel-header h5 {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* ---- Inline Add/Edit Form ---- */
+.inline-form {
+  background: #f9fafb;
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.inline-form .form-control {
+  border-radius: 0;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.inline-form .form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+.inline-form label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.4rem;
+}
+
+/* ---- Book Grid & Cards ---- */
+.book-grid-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-grid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.book-grid-card .book-cover {
+  height: 280px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.book-grid-card .book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.book-grid-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.book-grid-card .book-info {
+  padding: 1.25rem;
+}
+
+.book-grid-card .book-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: #000;
+}
+
+.book-grid-card .book-author {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.book-grid-card .book-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.book-rating {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ---- Book Detail Page ---- */
+.book-detail-cover {
+  max-height: 500px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.book-detail-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-detail-info dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.book-detail-info dd {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+/* ---- Borrowed Book Card ---- */
+.borrowed-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.borrowed-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.borrowed-card .borrowed-cover {
+  width: 120px;
+  min-height: 160px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.borrowed-card .borrowed-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.borrowed-card .borrowed-info {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ---- Genre Filter Sidebar ---- */
+.genre-filter .genre-item {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #374151;
+  text-decoration: none;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.genre-filter .genre-item:hover,
+.genre-filter .genre-item.active {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ---- Quick Actions ---- */
+.quick-action-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.quick-action-btn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ---- Action Buttons in Tables ---- */
+.btn-action {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 0;
+  border: 1px solid;
+}
+
+.btn-action-edit {
+  border-color: #000;
+  color: #000;
+  background: transparent;
+}
+
+.btn-action-edit:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn-action-delete {
+  border-color: #dc2626;
+  color: #dc2626;
+  background: transparent;
+}
+
+.btn-action-delete:hover {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-action-return {
+  border-color: #059669;
+  color: #059669;
+  background: transparent;
+}
+
+.btn-action-return:hover {
+  background: #059669;
+  color: #fff;
+}

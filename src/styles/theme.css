@@ -1,0 +1,192 @@
+:root {
+  --primary: #000000;
+  --secondary: #6B7280;
+  --light-bg: #F9FAFB;
+  --border-color: #E5E7EB;
+  --input-bg: #F3F4F6;
+  --input-focus-ring: #000000;
+}
+
+/* Split-screen Layout for Auth Pages */
+.auth-split-layout {
+  min-height: 100vh;
+  display: flex;
+  background-color: white;
+}
+
+.auth-sidebar {
+  display: none;
+  background-color: #111827;
+  color: white;
+  padding: 4rem;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sidebar abstract pattern */
+.auth-sidebar::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.15), transparent 50%),
+              radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.1), transparent 50%);
+  z-index: 1;
+}
+
+.auth-sidebar-content {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .auth-sidebar {
+    display: flex;
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+  .auth-form-side {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+}
+
+.auth-form-side {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-form-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Elegant Typography */
+.auth-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Ultra-clean Input Group */
+.custom-input-group .input-group-text {
+  background-color: var(--input-bg);
+  border: 1px solid transparent;
+  color: var(--secondary);
+  padding: 0 1rem 0 1.25rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  transition: all 0.2s;
+}
+
+.custom-input-group .form-control {
+  background-color: var(--input-bg);
+  border: 1px solid transparent;
+  padding: 0.875rem 1.25rem 0.875rem 0.5rem;
+  font-size: 0.95rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  color: var(--primary);
+  transition: all 0.2s;
+}
+
+/* Focus styles for the combined input group */
+.custom-input-group:focus-within .input-group-text,
+.custom-input-group:focus-within .form-control {
+  background-color: white;
+  border-color: var(--input-focus-ring);
+  box-shadow: none;
+}
+
+/* Remove right border of icon on focus so it merges seamlessly */
+.custom-input-group:focus-within .input-group-text {
+  border-right-color: transparent;
+  color: var(--primary);
+}
+.custom-input-group:focus-within .form-control {
+  border-left-color: transparent;
+}
+
+.custom-form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Bold, Modern Button */
+.auth-primary-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.auth-primary-btn:hover {
+  background-color: #1F2937;
+  color: white;
+}
+
+.auth-primary-btn:active {
+  transform: scale(0.98);
+}
+
+/* Minimalist Header & Footer */
+.minimal-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.minimal-header .nav-link {
+  color: var(--secondary);
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.2s;
+}
+
+.minimal-header .nav-link:hover {
+  color: var(--primary);
+}
+
+.minimal-header .nav-link-btn {
+  color: white !important;
+  background-color: var(--primary);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem !important;
+}
+
+.minimal-header .nav-link-btn:hover {
+  background-color: #1F2937;
+}
+
+.minimal-footer {
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+  padding: 2.5rem 0;
+  color: var(--secondary);
+  font-size: 0.875rem;
+}
